@@ -17,9 +17,9 @@ Implements the industry‑standard rule:
 
 
 
-\[
+```math
 d_{\text{actual}} \ge d_{\text{desired}} = t_{\text{gap}} v_{\text{ego}} + d_{\min}
-\]
+```
 
 
 
@@ -30,9 +30,9 @@ Ensures smooth acceleration transitions:
 
 
 
-\[
+```math
 |a(k) - a(k-1)| \le J_{\max} \Delta t
-\]
+```
 
 
 
