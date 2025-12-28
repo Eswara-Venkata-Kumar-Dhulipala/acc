@@ -86,11 +86,12 @@ No proprietary or paid tools required.
 ---
 
 ## 📁 Repository Structure
+'''
 acc.py                # Main ACC simulation script
 plots/               # Generated figures
 docs/                # LaTeX design note
 README.md             # Project documentation
-
+'''
 ---
 
 ## ▶️ How to Run
