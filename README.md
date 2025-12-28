@@ -1,18 +1,19 @@
-# Adaptive Cruise Control (ACC) — Jerk-Limited, Safety-Constrained Simulation
+# 🚗 Adaptive Cruise Control (ACC) — Jerk‑Limited, Safety‑Constrained Simulation
 
-This repository contains a complete Python implementation of a **Jerk-Limited Adaptive Cruise Control (ACC)** system with realistic longitudinal vehicle dynamics. The project demonstrates a full ADAS-style control pipeline without relying on proprietary tools like MATLAB/Simulink.
+This repository contains a complete Python implementation of a **Jerk‑Limited Adaptive Cruise Control (ACC)** system with realistic longitudinal vehicle dynamics.  
+The project demonstrates a full ADAS‑style control pipeline using **open‑source tools only**, making it fully reproducible and license‑safe.
 
 ---
 
-## 🚗 Project Features
+## ⭐ Project Highlights
 
-### ✔ Dual-Mode ACC Controller
-- **Speed Mode**: Tracks a desired set speed using proportional control.
-- **Gap Mode**: Maintains a safe time-gap distance using PI control.
-- **Hysteresis logic** prevents mode-switching oscillations.
+### ✔ Dual‑Mode ACC Controller
+- **Speed Mode** — tracks a desired set speed using proportional control  
+- **Gap Mode** — maintains a safe time‑gap distance using PI control  
+- **Hysteresis logic** prevents rapid mode switching  
 
 ### ✔ Safety Constraint Enforcement
-Implements the industry-standard rule:
+Implements the industry‑standard rule:
 
 
 
@@ -24,7 +25,7 @@ d_{\text{actual}} \ge d_{\text{desired}} = t_{\text{gap}} v_{\text{ego}} + d_{\m
 
 If violated, the controller automatically applies safe braking.
 
-### ✔ Jerk-Limited Control
+### ✔ Jerk‑Limited Control
 Ensures smooth acceleration transitions:
 
 
@@ -35,43 +36,52 @@ Ensures smooth acceleration transitions:
 
 
 
+This improves passenger comfort and prevents aggressive acceleration changes.
+
 ### ✔ Realistic Vehicle Dynamics
 Includes:
 - Aerodynamic drag  
 - Rolling resistance  
 - Engine/brake force saturation  
-- Mass-based acceleration dynamics  
+- Mass‑based acceleration dynamics  
 
 ---
 
 ## 📊 Simulation Outputs
 
-The script generates:
-- Ego vs Lead Speed (with settling markers)
-- Distance Tracking
-- Mode Switching Timeline
-- Acceleration Profile
-- Jerk Profile
+The script generates the following plots:
+
+- **Ego vs Lead Speed**  
+- **Distance Tracking**  
+- **Mode Switching Timeline**  
+- **Acceleration Profile**  
+- **Jerk Profile**  
+- **Settling Time and 95% Speed Markers**
+
+These visualizations help analyze controller behavior, stability, and comfort.
 
 ---
 
 ## 📈 Performance Metrics
 
-| Metric | Value |
-|--------|--------|
-| Max deceleration | −0.096 m/s² |
-| Max jerk | 1.000 m/s³ |
-| Time to 95% set speed | 24.40 s |
-| Settling time | 30.50 s |
-| Minimum distance margin | 0.000 m |
-| Comfort score | 10/10 |
+| Metric | Value | Meaning |
+|--------|--------|---------|
+| Max deceleration | −0.096 m/s² | Very smooth braking |
+| Max jerk | 1.000 m/s³ | Within comfort limits |
+| Time to 95% set speed | 24.40 s | Smooth acceleration |
+| Settling time | 30.50 s | Stable before Gap Mode |
+| Minimum distance margin | 0.000 m | Safety constraint satisfied |
+| Comfort score | 10/10 | Excellent ride comfort |
 
 ---
 
 ## 🧠 Technologies Used
-- Python (NumPy, Matplotlib)
-- LaTeX (Documentation)
-- TikZ (Block Diagrams)
+- **Python** (NumPy, Matplotlib)  
+- **LaTeX** for documentation  
+- **TikZ** for block diagrams  
+- **GitHub** for version control  
+
+No proprietary or paid tools required.
 
 ---
 
@@ -83,7 +93,7 @@ README.md             # Project documentation
 
 ---
 
-## 🛠️ How to Run
+## ▶️ How to Run
+
 ```bash
 python acc.py
-
